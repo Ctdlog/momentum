@@ -1,11 +1,20 @@
+function plus(firstNumber, secondNumber) {
+  console.log(firstNumber + secondNumber);
+}
+
+function divide(a, b) {
+  console.log(a / b);
+}
+
+plus(60, 8);
+divide(98, 20);
+
 const player = {
   name: "nico",
-  points: 10,
-  fat: true,
+  sayHello: function (otherPersonName) {
+    console.log("hello " + otherPersonName + " nice to meet you.");
+  },
 };
 
-console.log(player);
-player.lastName = "potato";
-player.points = 15;
-
-console.log(player);
+player.sayHello("lynn");
+player.sayHello("nico");
