@@ -1,20 +1,17 @@
-function plus(firstNumber, secondNumber) {
-  console.log(firstNumber + secondNumber);
+const title = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+  title.style.color = "blue";
 }
 
-function divide(a, b) {
-  console.log(a / b);
+function handleMouseEnter() {
+  title.innerText = "Mouse is here!";
 }
 
-plus(60, 8);
-divide(98, 20);
+function handleMouseLeave() {
+  title.innerText = "Mouse is gone!";
+}
 
-const player = {
-  name: "nico",
-  sayHello: function (otherPersonName) {
-    console.log("hello " + otherPersonName + " nice to meet you.");
-  },
-};
-
-player.sayHello("lynn");
-player.sayHello("nico");
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
